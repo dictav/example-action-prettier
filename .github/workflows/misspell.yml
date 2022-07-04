@@ -1,0 +1,10 @@
+name: Misspell
+on:
+  pull_request:
+    types: [ready_for_review, opened, reopend, synchronize]
+jobs:
+  misspell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: reviewdog/action-misspell@v1
